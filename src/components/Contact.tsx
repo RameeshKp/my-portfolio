@@ -10,54 +10,57 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:rajeshchittyal21@gmail.com" data-cursor="disable">
-                rajeshchittyal21@gmail.com
+              <a href="mailto:irameeshkp@gmail.com" data-cursor="disable">
+                irameeshkp@gmail.com
               </a>
             </p>
             <h4>Education</h4>
-            <p>BSc in Computer Science</p>
+            <p>
+              Bachelor&apos;s in Electronics and Communication Engineering,
+              Government Engineering College Wayanad (2014 - 2018)
+            </p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/raxx21"
+              href="mailto:irameeshkp@gmail.com"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
-              Github <MdArrowOutward />
+              Email <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/rajesh-chityal-2a70141b3"
+              href="tel:+917560961914"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
+              Phone <MdArrowOutward />
             </a>
             <a
-              href="https://x.com/raxx21_official"
+              href="https://www.google.com/maps/search/?api=1&query=Kerala%2C%20India"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
-              Twitter <MdArrowOutward />
+              Location <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com/therajeshchityal"
+              href="/Rameesh_KP_Resume_2026.pdf"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
-              Instagram <MdArrowOutward />
+              Resume <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Rajesh Chityal</span>
+              Designed and Developed <br /> by <span>Rameesh K P</span>
             </h2>
             <h5>
-              <MdCopyright /> 2025
+              <MdCopyright /> 2026
             </h5>
           </div>
         </div>

@@ -60,27 +60,30 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/rajeshchityal" target="_blank">
+          <a href="mailto:irameeshkp@gmail.com" target="_blank">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/rajeshchityal" target="_blank">
+          <a href="tel:+917560961914" target="_blank">
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com/rajeshchityal" target="_blank">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Kerala%2C%20India"
+            target="_blank"
+          >
             <FaXTwitter />
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com/rajeshchityal" target="_blank">
+          <a href="/Rameesh_KP_Resume_2026.pdf" target="_blank">
             <FaInstagram />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a className="resume-button" href="/Rameesh_KP_Resume_2026.pdf">
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />

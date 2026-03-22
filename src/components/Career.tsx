@@ -15,43 +15,42 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>Senior Software Engineer</h4>
+                <h5>Enceladus DLT</h5>
               </div>
-              <h3>2020</h3>
+              <h3>Jun 2025 - Present</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Building mobile features and blockchain integrations for Solana-based
+              dApps. Collaborating with cross-functional teams to deliver secure,
+              scalable Web3 solutions.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Software Engineer</h4>
+                <h5>SayOne Technologies</h5>
               </div>
-              <h3>2021</h3>
+              <h3>Aug 2023 - Jun 2025</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Integrated APIs, third-party libraries, and plugins in React Native
+              apps. Resolved performance issues and delivered stable app store releases.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h4>Software Engineer</h4>
+                <h5>Accubits Technologies Inc / Sanesquare Pvt Ltd</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>Jun 2019 - Aug 2023</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Delivered blockchain and AI-focused mobile apps, implemented wallet
+              features on iOS and Android, and built web/hybrid apps before
+              transitioning fully to React Native.
             </p>
           </div>
         </div>

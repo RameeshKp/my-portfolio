@@ -5,34 +5,87 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "Lume",
+    category: "Mobile DeFi",
+    tools:
+      "Mobile DeFi app for tokenized assets and on-chain portfolios. React Native, Solana, Wallet Integrations",
+    image: "/images/placeholder.webp",
   },
   {
-    title: "Radix",
+    title: "SolMail",
+    category: "On-Chain Messaging",
+    tools:
+      "Wallet-native messaging, email, and token transfers. React Native, Solana, Web3",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "My Health Rocks",
+    category: "Health Tracking",
+    tools: "Track and share health progress. React Native, Analytics, Sharing",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "Advantage Lifts",
     category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    tools:
+      "Mobile commerce for browsing and purchasing car lifts. React Native, Payments, Product Catalog",
+    image: "/images/placeholder.webp",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
+    title: "Townhall",
+    category: "Business Analytics",
+    tools:
+      "Business analysis, engagement, and marketing insights. React Native, Dashboards, Reports",
+    image: "/images/placeholder.webp",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
+    title: "VOW",
+    category: "Crypto Wallet",
+    tools:
+      "Secure digital asset management and transactions. React Native, Security, Transactions",
+    image: "/images/placeholder.webp",
   },
   {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "DREX",
+    category: "Crypto Wallet",
+    tools:
+      "Secure storage and transfer of digital assets. React Native, Encryption, Wallet Features",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "KORA",
+    category: "Sustainability",
+    tools:
+      "Tracks and reduces carbon emissions via data insights. React Native, Analytics, Data Insights",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "Hi And Buy",
+    category: "Marketplace",
+    tools:
+      "Mobile marketplace for buying, selling, and managing listings. React Native, Listings, Transactions",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "Amana",
+    category: "Booking Platform",
+    tools:
+      "Book, sell, and rent parking and storage spaces. React Native, Reservations, Payments",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "Medvibes",
+    category: "Healthcare",
+    tools:
+      "Web and mobile booking for doctors and hospitals. React Native, Web, Scheduling",
+    image: "/images/placeholder.webp",
+  },
+  {
+    title: "InnatheCinema",
+    category: "Ticketing",
+    tools:
+      "View showtimes, select seats, and reserve tickets. Web App, Seat Selection, Booking",
+    image: "/images/placeholder.webp",
   },
 ];
 
