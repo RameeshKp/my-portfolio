@@ -11,23 +11,111 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 
-const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+const techStacks = [
+  "React Native",
+  "JavaScript",
+  "TypeScript",
+  "Angular",
+  "HTML5",
+  "CSS3",
+  "Ionic",
+  "Expo",
+  "Redux",
+  "Axios",
+  "REST API",
+  "GraphQL",
+  "Zustand",
+  "Jotai",
+  "React Query",
+  "SQLite",
+  "Drizzle ORM",
+  "WatermelonDB",
+  "Android Studio",
+  "Xcode",
+  "VS Code",
+  "Git",
+  "Jira",
+  "Zoho",
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+
+const textureColors = [
+  "#5eead4",
+  "#f7df1e",
+  "#3178c6",
+  "#dd0031",
+  "#e34f26",
+  "#1572b6",
+  "#3880ff",
+  "#111827",
+  "#764abc",
+  "#671ddf",
+  "#22c55e",
+  "#e10098",
+  "#4338ca",
+  "#111827",
+  "#ff4154",
+  "#3b82f6",
+  "#c084fc",
+  "#38bdf8",
+  "#34a853",
+  "#147efb",
+  "#007acc",
+  "#f05032",
+  "#0052cc",
+  "#d9232e",
+];
+
+const createTechTexture = (label: string, color: string) => {
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 512;
+
+  const context = canvas.getContext("2d")!;
+  context.fillStyle = "#050810";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  const gradient = context.createRadialGradient(256, 180, 40, 256, 256, 300);
+  gradient.addColorStop(0, color);
+  gradient.addColorStop(1, "#0a0e17");
+  context.fillStyle = gradient;
+  context.globalAlpha = 0.9;
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.globalAlpha = 1;
+
+  context.strokeStyle = "rgba(255, 255, 255, 0.22)";
+  context.lineWidth = 10;
+  context.beginPath();
+  context.arc(256, 256, 218, 0, Math.PI * 2);
+  context.stroke();
+
+  const words = label.split(" ");
+  const lines =
+    label.length > 11 && words.length > 1
+      ? [words.slice(0, -1).join(" "), words[words.length - 1]]
+      : [label];
+
+  context.fillStyle = "#ffffff";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.font = `${lines.length > 1 ? 58 : label.length > 9 ? 56 : 72}px Geist, Arial, sans-serif`;
+
+  lines.forEach((line, index) => {
+    const offset = (index - (lines.length - 1) / 2) * 70;
+    context.fillText(line, 256, 256 + offset, 400);
+  });
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+
+  return texture;
+};
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
+const spheres = [...Array(30)].map((_, index) => ({
   scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+  materialIndex: index % techStacks.length,
 }));
 
 type SphereProps = {
@@ -152,23 +240,27 @@ const TechStack = () => {
     };
   }, []);
   const materials = useMemo(() => {
-    return textures.map(
-      (texture) =>
-        new THREE.MeshPhysicalMaterial({
-          map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
-        })
-    );
+    return techStacks.map((label, index) => {
+      const texture = createTechTexture(
+        label,
+        textureColors[index % textureColors.length]
+      );
+
+      return new THREE.MeshPhysicalMaterial({
+        map: texture,
+        emissive: "#ffffff",
+        emissiveMap: texture,
+        emissiveIntensity: 0.3,
+        metalness: 0.35,
+        roughness: 0.85,
+        clearcoat: 0.25,
+      });
+    });
   }, []);
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2> My Tech Stack</h2>
 
       <Canvas
         shadows
@@ -189,11 +281,11 @@ const TechStack = () => {
         <directionalLight position={[0, 5, -4]} intensity={2} />
         <Physics gravity={[0, 0, 0]}>
           <Pointer isActive={isActive} />
-          {spheres.map((props, i) => (
+          {spheres.map(({ materialIndex, ...props }, i) => (
             <SphereGeo
               key={i}
               {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              material={materials[materialIndex]}
               isActive={isActive}
             />
           ))}
