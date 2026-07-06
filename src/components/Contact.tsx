@@ -25,6 +25,7 @@ const Contact = () => {
             <a
               href="mailto:irameeshkp@gmail.com"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -33,6 +34,7 @@ const Contact = () => {
             <a
               href="tel:+917560961914"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -41,6 +43,7 @@ const Contact = () => {
             <a
               href="https://www.google.com/maps/search/?api=1&query=Kerala%2C%20India"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -49,6 +52,7 @@ const Contact = () => {
             <a
               href="/Rameesh_KP_Resume_2026.pdf"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >

@@ -43,14 +43,28 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Software Engineer</h4>
-                <h5>Accubits Technologies Inc / Sanesquare Pvt Ltd</h5>
+                <h5>Accubits Technologies Inc</h5>
               </div>
-              <h3>Jun 2019 - Aug 2023</h3>
+              <h3>Dec 2021 - Aug 2023</h3>
             </div>
             <p>
-              Delivered blockchain and AI-focused mobile apps, implemented wallet
-              features on iOS and Android, and built web/hybrid apps before
-              transitioning fully to React Native.
+              Delivered blockchain and AI-focused mobile apps, contributed to
+              real-world blockchain applications, and implemented wallet features
+              across iOS and Android platforms.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Associate Software Engineer</h4>
+                <h5>Sanesquare Private Limited</h5>
+              </div>
+              <h3>Jun 2019 - Dec 2021</h3>
+            </div>
+            <p>
+              Built web applications with Angular, developed hybrid mobile
+              features using Ionic, and transitioned into React Native development
+              for cross-platform mobile features, testing, debugging, and releases.
             </p>
           </div>
         </div>

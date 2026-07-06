@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Front-End Mobile Application Developer with 6+ years of experience
+          Front-End Mobile Application Developer with 7+ years of experience
           designing and delivering scalable mobile applications. Expertise in
           React Native, modern JavaScript and TypeScript, and complex mobile app
           development. Proficient in state management, design patterns, and
