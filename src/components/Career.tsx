@@ -18,7 +18,7 @@ const Career = () => {
                 <h4>Senior Software Engineer</h4>
                 <h5>Enceladus DLT</h5>
               </div>
-              <h3>Jun 2025 - Present</h3>
+              <h3>Jun 2025 - July 2026</h3>
             </div>
             <p>
               Building mobile features and blockchain integrations for Solana-based
