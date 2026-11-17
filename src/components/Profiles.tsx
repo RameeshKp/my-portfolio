@@ -41,7 +41,7 @@ export default function Profiles({ view }: { view: DetailProfile | null }) {
       </header>
       {view ? <ProfileDetail view={view} /> : (
         <main className="profiles-selector">
-          <ProfilePortrait />
+          <div className="profiles-monogram" aria-hidden="true">RK<span>P</span></div>
           <h1>Who’s watching?</h1>
           <ul className="profiles-grid">
             {profiles.map(({ id, name, description, glyph }) => (
@@ -64,10 +64,10 @@ function ProfilePortrait() {
   return (
     <div className="profile-portrait">
       <img
-        src={`${import.meta.env.BASE_URL}images/rameesh-portrait.webp`}
+        src={`${import.meta.env.BASE_URL}images/me.PNG`}
         alt="Portrait of Rameesh K P"
-        width={800}
-        height={800}
+        width={1086}
+        height={1448}
         fetchPriority="high"
       />
     </div>
@@ -80,20 +80,23 @@ function ProfileDetail({ view }: { view: DetailProfile }) {
 
   return (
     <main className="profile-story">
-      <div className="profile-story-intro">
-        <p className="profile-story-label">{profile?.name} view</p>
-        <h1>{title}</h1>
-        <p>{intro}</p>
-        <div className="profile-actions">
-          {view === "rameesh" && (
-            <>
-              <a href={memoryGallery}>Gallery <MdArrowOutward aria-hidden /></a>
-              <a href="mailto:irameeshkp@gmail.com">Get in touch <MdArrowOutward aria-hidden /></a>
-            </>
-          )}
-          {view === "developer" && <a href={github}>GitHub <MdArrowOutward aria-hidden /></a>}
-          {view === "creative" && <a href={instagram}>Find me on Instagram <MdArrowOutward aria-hidden /></a>}
+      <div className="profile-story-heading">
+        <div className="profile-story-intro">
+          <p className="profile-story-label">{profile?.name} view</p>
+          <h1>{title}</h1>
+          <p>{intro}</p>
+          <div className="profile-actions">
+            {view === "rameesh" && (
+              <>
+                <a href={memoryGallery}>Gallery <MdArrowOutward aria-hidden /></a>
+                <a href="mailto:irameeshkp@gmail.com">Get in touch <MdArrowOutward aria-hidden /></a>
+              </>
+            )}
+            {view === "developer" && <a href={github}>GitHub <MdArrowOutward aria-hidden /></a>}
+            {view === "creative" && <a href={instagram}>Find me on Instagram <MdArrowOutward aria-hidden /></a>}
+          </div>
         </div>
+        {view === "rameesh" && <ProfilePortrait />}
       </div>
 
       {view === "rameesh" && <PersonalSections />}

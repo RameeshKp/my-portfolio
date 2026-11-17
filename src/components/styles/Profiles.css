@@ -78,6 +78,7 @@ body:has(.profiles-page) {
 }
 
 .profile-portrait {
+  aspect-ratio: 1;
   overflow: hidden;
   isolation: isolate;
   border: 1px solid #ffd4ce38;
@@ -90,13 +91,37 @@ body:has(.profiles-page) {
 .profile-portrait img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   animation: portrait-focus 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.profiles-selector .profile-portrait {
-  width: clamp(124px, 23svh, 208px);
+.profiles-monogram {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  width: clamp(84px, 15svh, 124px);
+  aspect-ratio: 1;
   margin: 0 auto clamp(18px, 4vh, 32px);
+  border: 1px solid #ff736e55;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #3c1825, #170d14);
+  box-shadow: 0 12px 34px #0006;
+  font-size: clamp(1.7rem, 5svh, 2.65rem);
+  font-weight: 850;
+  letter-spacing: -0.09em;
+}
+
+.profiles-monogram span {
+  color: var(--profile-accent);
+}
+
+.profile-story-heading:has(.profile-portrait) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 256px);
+  align-items: center;
+  gap: clamp(24px, 5vw, 56px);
 }
 
 .profiles-grid {
@@ -342,6 +367,15 @@ body:has(.profiles-page) {
 }
 
 @media (max-width: 620px) {
+  .profile-story-heading:has(.profile-portrait) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-story-heading .profile-portrait {
+    width: min(100%, 256px);
+    grid-row: 1;
+  }
+
   .profiles-grid {
     grid-template-columns: repeat(2, minmax(0, 134px));
     row-gap: 22px;
