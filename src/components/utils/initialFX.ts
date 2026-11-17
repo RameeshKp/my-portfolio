@@ -5,6 +5,8 @@ import { smoother } from "../Navbar";
 export function initialFX() {
   document.body.style.overflowY = "auto";
   smoother.paused(false);
+  const section = document.getElementById(window.location.hash.slice(1));
+  if (section) smoother.scrollTo(section, false, "top top");
   document.getElementsByTagName("main")[0].classList.add("main-active");
   gsap.to("body", {
     backgroundColor: "#0a0e17",

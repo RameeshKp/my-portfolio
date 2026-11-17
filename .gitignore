@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+*.tsbuildinfo
+/Portfolio_series/
 *.local
 
 # Editor directories and files
