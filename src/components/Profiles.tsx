@@ -5,7 +5,7 @@ import "./styles/Profiles.css";
 
 const github = "https://github.com/RameeshKp";
 const instagram = "https://www.instagram.com/rameesh_k_p/";
-const illustrationReels = ["DfzOgGwKQ_P", "DfzQA7oKVdA"];
+const illustrationReels = ["DfzOgGwKQ_P", "DfzQA7oKVdA", "Df17urmv_iJ", "Df3fPxIqt-O"];
 const memoryGallery = "https://rameeshkpsgallery.netlify.app/";
 const resume = "/Rameesh_KP_Resume_2026.pdf";
 
@@ -179,6 +179,11 @@ function IllustrationReels() {
   return (
     <div className="profile-reels">
       <h3>Illustration reels</h3>
+      <article className="profile-guide-link">
+        <h4>Create your own Fafafa Funk reel</h4>
+        <p>Follow my illustrated ChatGPT workflow, with copyable prompts for your cutouts and reel.</p>
+        <a href="?guide=fafafa-funk">Read the complete guide <MdArrowForward aria-hidden /></a>
+      </article>
       <ul className="profile-reel-grid">
         {illustrationReels.map((id, index) => {
           const url = `https://www.instagram.com/reel/${id}/`;

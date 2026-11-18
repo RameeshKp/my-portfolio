@@ -401,3 +401,14 @@ body:has(.profiles-page) {
     transition: none;
   }
 }
+
+.profile-guide-link {
+  margin: 20px 0 28px;
+  padding: 24px;
+  border: 1px solid #ffd4ce38;
+  border-radius: 14px;
+  background: #231721;
+}
+
+.profile-guide-link h4 { margin: 0; font-size: 1.25rem; }
+.profile-guide-link a { display: inline-flex; align-items: center; gap: 8px; color: var(--profile-accent); font-weight: 650; }
