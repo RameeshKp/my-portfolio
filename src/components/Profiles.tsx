@@ -180,6 +180,11 @@ function IllustrationReels() {
     <div className="profile-reels">
       <h3>Illustration reels</h3>
       <article className="profile-guide-link">
+        <h4>How to make an Instagram Reel with ChatGPT</h4>
+        <p>Turn your raw clips into a reel with a five-step illustrated workflow, a copyable prompt, and editing tips.</p>
+        <a href="?guide=instagram-reel">Read the complete guide <MdArrowForward aria-hidden /></a>
+      </article>
+      <article className="profile-guide-link">
         <h4>Create your own Fafafa Funk reel</h4>
         <p>Follow my illustrated ChatGPT workflow, with copyable prompts for your cutouts and reel.</p>
         <a href="?guide=fafafa-funk">Read the complete guide <MdArrowForward aria-hidden /></a>

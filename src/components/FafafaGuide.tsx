@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import { MdArrowBack, MdCheck, MdContentCopy, MdDownload, MdMovie, MdPerson, MdPhotoLibrary, MdPlayArrow } from "react-icons/md";
+import { useEffect } from "react";
+import { MdArrowBack, MdCheck, MdDownload, MdMovie, MdPerson, MdPhotoLibrary, MdPlayArrow } from "react-icons/md";
 import "./styles/FafafaGuide.css";
+import CopyButton from "./GuideCopyButton";
 
 const cutoutPrompt = `Using my uploaded photos, create nine portrait cutouts of the same person. Keep my face recognizable, including my age, facial features and hairstyle. Use a grayscale comic style with dark outlines and halftone shading.
 
@@ -23,18 +24,6 @@ Remove every visible part of the original person, including the hair, shoulders,
 
 Export the finished reel as an MP4 in the same aspect ratio as the reference.`;
 
-function CopyButton({ text, label }: { text: string; label: string }) {
-  const [status, setStatus] = useState("");
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(text);
-      setStatus("Copied");
-    } catch {
-      setStatus("Copy unavailable. Select and copy the text manually.");
-    }
-  }
-  return <div className="guide-copy"><button onClick={copy}><MdContentCopy aria-hidden />{label}</button><span role="status">{status}</span></div>;
-}
 
 function WorkflowIllustration({ stage }: { stage: "photos" | "cutouts" | "reference" | "edit" | "export" }) {
   return (
