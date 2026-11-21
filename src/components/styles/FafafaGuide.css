@@ -92,3 +92,17 @@ body:has(.fafafa-guide) { overflow-y: auto; }
 .reel-guide-feedback { padding-left: 22px; line-height: 1.8; }
 .reel-guide-feedback li + li { margin-top: 12px; }
 .reel-guide-source { text-decoration: underline; text-underline-offset: 4px; }
+
+.assalayavale-step {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.assalayavale-step h2,
+.assalayavale-step p {
+  margin: 0;
+}
+
+.assalayavale-step .guide-prompt h3 {
+  margin: 0 0 12px;
+}

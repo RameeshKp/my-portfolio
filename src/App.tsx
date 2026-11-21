@@ -4,16 +4,21 @@ import Profiles from "./components/Profiles";
 import { readPortfolioView } from "./data/profiles";
 import FafafaGuide from "./components/FafafaGuide";
 import InstagramReelGuide from "./components/InstagramReelGuide";
+import AssalayavaleGuide from "./components/AssalayavaleGuide";
 
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
 import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
-  if (new URLSearchParams(window.location.search).get("guide") === "instagram-reel") {
+  const guide = new URLSearchParams(window.location.search).get("guide");
+  if (guide === "assalayavale") {
+    return <AssalayavaleGuide />;
+  }
+  if (guide === "instagram-reel") {
     return <InstagramReelGuide />;
   }
-  if (new URLSearchParams(window.location.search).get("guide") === "fafafa-funk") {
+  if (guide === "fafafa-funk") {
     return <FafafaGuide />;
   }
   const view = readPortfolioView(window.location);

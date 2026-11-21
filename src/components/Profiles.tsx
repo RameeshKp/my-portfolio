@@ -189,6 +189,11 @@ function IllustrationReels() {
         <p>Follow my illustrated ChatGPT workflow, with copyable prompts for your cutouts and reel.</p>
         <a href="?guide=fafafa-funk">Read the complete guide <MdArrowForward aria-hidden /></a>
       </article>
+      <article className="profile-guide-link">
+        <h4>Assalayavale Couple Reel</h4>
+        <p>Create a couple reel from two photos with nine poses, two copyable prompts, and the lyric-motion video.</p>
+        <a href="?guide=assalayavale"><span>Read the Asalayavale guide</span> <MdArrowForward aria-hidden /></a>
+      </article>
       <ul className="profile-reel-grid">
         {illustrationReels.map((id, index) => {
           const url = `https://www.instagram.com/reel/${id}/`;
